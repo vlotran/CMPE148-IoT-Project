@@ -1,4 +1,3 @@
-```md
 # CMPE148 IoT Smart Home Simulator (MQTT vs CoAP)
 
 This project simulates a small smart-home IoT network using **Mininet** and compares two lightweight application-layer protocols:
