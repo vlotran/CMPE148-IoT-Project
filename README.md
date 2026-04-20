@@ -65,7 +65,7 @@ CMPE148-IoT-Project/
     02_analyze_results.ipynb
   results/
     run_*/                # generated experiment outputs
-  requirements.txt        # Python deps only (pip)
+  requirements.txt        
 ```
 
 ---
