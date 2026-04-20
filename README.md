@@ -135,7 +135,7 @@ jupyter lab --no-browser --ip=0.0.0.0 --port=8888
 ```
 
 Open:
-- `notebooks/02_analyze_results.ipynb`
+- `notebooks/analyze_results.ipynb`
 
 This notebook:
 - finds the latest MQTT run and latest CoAP run
