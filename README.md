@@ -167,12 +167,12 @@ sudo pkill -f tcpdump || true
 
 ### Sudo prompts inside notebooks
 Recommended: run experiments in the terminal (above), and use the notebook only for analysis.
+
 ---
 
 ## Current Implementation Progress
 
 ### Completed
-```bash
 - Mininet smart-home topology implemented (gateway + temp sensors)
 - Reproducible experiment runner (`src/run_experiment.py`) for MQTT and CoAP
 - Unified CSV logging format for fair protocol comparison (includes `seq` + `latency_ms`)
@@ -219,4 +219,3 @@ Add a second topology for comparison, e.g.:
 - two-hop topology (sensors → intermediate switch/router → gateway)
 
 Measure how multi-hop affects performance for MQTT vs CoAP.
-```
