@@ -168,8 +168,7 @@ sudo pkill -f tcpdump || true
 ### Sudo prompts inside notebooks
 Recommended: run experiments in the terminal (above), and use the notebook only for analysis.
 ```
----
-
+```
 ## Current Implementation Progress
 
 ### Completed
@@ -219,5 +218,5 @@ Add a second topology for comparison, e.g.:
 - two-hop topology (sensors → intermediate switch/router → gateway)
 
 Measure how multi-hop affects performance for MQTT vs CoAP.
+```
 
----
