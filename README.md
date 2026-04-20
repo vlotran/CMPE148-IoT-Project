@@ -218,5 +218,3 @@ Add a second topology for comparison, e.g.:
 - two-hop topology (sensors → intermediate switch/router → gateway)
 
 Measure how multi-hop affects performance for MQTT vs CoAP.
-```
-
