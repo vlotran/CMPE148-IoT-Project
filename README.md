@@ -62,7 +62,7 @@ CMPE148-IoT-Project/
     coap_sensor.py
     coap_server.py
   notebooks/
-    02_analyze_results.ipynb
+    analyze_results.ipynb
   results/
     run_*/                # generated experiment outputs
   requirements.txt        
