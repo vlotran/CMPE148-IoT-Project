@@ -78,7 +78,7 @@ class SensorResource(resource.Resource):
 
         return aiocoap.Message(code=aiocoap.CHANGED, payload=b"OK")
 
-async def main_async(bind_ip, csv_path, duration):
+async def main_async(bind_ip, csv_path, duration, num_sensors):
     start_time = time.time()
 
     csv_file = open(csv_path, "w", newline="")
@@ -110,7 +110,9 @@ async def main_async(bind_ip, csv_path, duration):
     # aiocoap doesn't do true wildcards; we register exact depth paths dynamically is complex,
     # so we register a resource at /sensors and also common sensor paths used in our runner:
     handler = SensorResource(writer, start_time)
-    for sid in ["temp1", "temp2"]:
+
+    for i in range(1, num_sensors + 1):
+        sid = f"temp{i}"
         sensors.add_resource([sid, "temperature"], handler)
 
     context = await aiocoap.Context.create_server_context(root, bind=(bind_ip, 5683))
@@ -126,9 +128,10 @@ def main():
     parser.add_argument("--bind", default="10.0.0.1")
     parser.add_argument("--csv", required=True)
     parser.add_argument("--duration", type=int, default=30)
+    parser.add_argument("--sensors", type=int, default=2)
     args = parser.parse_args()
 
-    asyncio.run(main_async(args.bind, args.csv, args.duration))
+    asyncio.run(main_async(args.bind, args.csv, args.duration, args.sensors))
 
 if __name__ == "__main__":
     main()
