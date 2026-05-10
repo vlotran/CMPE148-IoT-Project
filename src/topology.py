@@ -7,6 +7,7 @@ def build_smart_home_net(
     delay_sensor="5ms",
     bw_sensor=10,
     bw_gateway=100,
+    loss=0,
   ):
     """
     Star topology (simplified MVP):
@@ -25,6 +26,6 @@ def build_smart_home_net(
 
     for i in range(1, num_sensors + 1):
         sensor = net.addHost(f"temp{i}", ip=f"10.0.0.{10+i}/24")
-        net.addLink(sensor, s1, bw=bw_sensor, delay=delay_sensor)
+        net.addLink(sensor, s1, bw=bw_sensor, delay=delay_sensor, loss=loss)
 
     return net

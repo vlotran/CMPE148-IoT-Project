@@ -85,6 +85,7 @@ def main():
     parser.add_argument("--sensors", type=int, default=2)
     parser.add_argument("--bw_sensor", type=float, default=10)
     parser.add_argument("--bw_gateway", type=float, default=100)
+    parser.add_argument("--loss", type=float, default=0)
 
     args = parser.parse_args()
 
@@ -115,6 +116,7 @@ def main():
             delay_sensor=args.delay,
             bw_sensor=args.bw_sensor,
             bw_gateway=args.bw_gateway,
+            loss=args.loss
         )
         net.start()
 
@@ -141,6 +143,7 @@ def main():
             "protocol": args.protocol,
             "duration": args.duration,
             "delay": args.delay,
+            "loss": args.loss,
             "num_sensors": args.sensors,
             "bw_sensor": args.bw_sensor,
             "bw_gateway": args.bw_gateway,
