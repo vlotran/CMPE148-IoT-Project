@@ -14,7 +14,7 @@ Sensors periodically generate telemetry. The gateway collects messages, logs the
 |------|-------|
 | Vy Tran | vylophuong.tran@sjsu.edu | 
 | Diana Bader | diana.bader@sjsu.edu | 
-| Mangsagar Bath | mangsagar.bath@sjsu.edu | 
+| Mansagar Bath | mangsagar.bath@sjsu.edu | 
 | Canhui Huang | canhui.huang@sjsu.edu | 
 
 
