@@ -52,20 +52,28 @@ Install via `pip`:
 
 ```
 CMPE148-IoT-Project/
+
   configs/
-    mosquitto.conf
+    mosquitto.conf          # Configuration file for MQTT broker (Mosquitto)
+
   src/
-    topology.py
-    run_experiment.py
-    mqtt_sensor.py
-    mqtt_logger.py
-    coap_sensor.py
-    coap_server.py
+    topology.py             # Defines Mininet network topology (gateway + sensors)
+    run_experiment.py       # Main script to run experiments (setup, run, collect data)
+
+    mqtt_sensor.py          # Simulates IoT sensor sending data via MQTT (publisher)
+    mqtt_logger.py          # Subscribes to MQTT topics and logs messages to CSV
+
+    coap_sensor.py          # Simulates IoT sensor sending data via CoAP (client)
+    coap_server.py          # CoAP server that receives sensor data and logs to CSV
+
   notebooks/
-    analyze_results.ipynb
+    analyze_results.ipynb   # Analyzes results (latency, throughput, plots, comparisons)
+
   results/
-    run_*/                # generated experiment outputs
-  requirements.txt        
+    run_*/                  # Output folders for each experiment run
+                            # Includes CSV logs, PCAP files, and metadata
+
+  requirements.txt          # Python dependencies needed to run the project        
 ```
 
 ---
